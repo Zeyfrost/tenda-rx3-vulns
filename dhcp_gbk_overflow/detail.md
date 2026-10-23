@@ -28,5 +28,3 @@ pkt = (Ether(dst="ff:ff:ff:ff:ff:ff") /
 sendp(pkt, iface="eth0")
 # auto_discover crashes (SIGSEGV)
 ```
-
-![Crash under QEMU emulation](screenshots/2.png)

