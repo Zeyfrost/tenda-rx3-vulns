@@ -28,3 +28,5 @@ pkt = (Ether(dst="ff:ff:ff:ff:ff:ff") /
 sendp(pkt, iface="eth0")
 # auto_discover crashes (SIGSEGV)
 ```
+
+Note: This vulnerability is triggered via DHCP (UDP port 67), not HTTP. The PoC requires sending a crafted DHCP DISCOVER packet on the local network.
