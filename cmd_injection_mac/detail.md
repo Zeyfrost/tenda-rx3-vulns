@@ -4,7 +4,7 @@
 
 ## Analysis
 
-In the httpd binary, the function `fromAdvSetMacMtuWan` handles requests to `/goform/AdvSetMacMtuWan`. The `mac` parameter is stored without sanitization. The `multiWAN` binary later uses this value in `doSystemCmd("ifconfig %s hw ether %s")`, which calls `system()`, allowing arbitrary command execution as root.
+In the httpd binary, the function `fromAdvSetMacMtuWan` handles requests to `/goform/AdvSetMacMtuWan`. The `mac` parameter is stored in NVRAM without sanitization. The `multiWAN` binary later reads this value and passes it to `doSystemCmd("ifconfig %s hw ether %s")`, which calls `system()`, allowing arbitrary command execution as root.
 
 This endpoint requires authentication. Combined with the [authentication bypass](../auth_bypass/detail.md), it can be exploited without credentials from the LAN.
 
