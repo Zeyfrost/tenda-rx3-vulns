@@ -1,4 +1,4 @@
-# Tenda RX3 US — Security Vulnerabilities
+# Tenda RX3 US Security Vulnerabilities
 
 | Firmware Name | Firmware Version | Download Link |
 | ------------- | ---------------- | ------------- |
