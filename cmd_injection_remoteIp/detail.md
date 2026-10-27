@@ -4,7 +4,7 @@
 
 ## Analysis
 
-In the httpd binary, the function `formSetSafeWanWebMan` handles requests to `/goform/SetRemoteWebCfg`. The `remoteIp` parameter is stored in NVRAM (`wans.wanwebip`) without sanitization. The `netctrl` binary later reads this value and passes it to `doSystemCmd("iptables ... -s %s ...")`, which calls `system()`, allowing arbitrary command execution as root.
+In the httpd binary, the function `formSetSafeWanWebMan` handles requests to `/goform/SetRemoteWebCfg`. The `remoteIp` parameter is stored in NVRAM key `wans.wanwebip` without sanitization. The `netctrl` binary's `advance_save_wan_access_cfg` function later reads this value via `GetValue("wans.wanwebip")` and passes it directly to `doSystemCmd("iptables -t nat -A %s -p tcp -d %s -s %s ...")`, which calls `system()`, allowing arbitrary command execution as root.
 
 This endpoint requires authentication. Combined with the [authentication bypass](../auth_bypass/detail.md), it can be exploited without credentials from the LAN.
 
