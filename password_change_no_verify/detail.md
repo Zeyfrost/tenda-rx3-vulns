@@ -20,4 +20,4 @@ curl -i -X POST "http://192.168.0.1/goform/fast_setting_wifi_set?reasy-ui-1.0.3.
 
 ## Demo
 
-<video src="demo.mp4" controls width="100%"></video>
+https://github.com/Zeyfrost/tenda-rx3-vulns/raw/master/password_change_no_verify/demo.mp4
