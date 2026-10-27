@@ -20,4 +20,4 @@ curl -i -X POST "http://192.168.0.1/goform/setIPv6Status?reasy-ui-1.0.3.js" -d "
 
 ## Demo
 
-https://github.com/Zeyfrost/tenda-rx3-vulns/raw/master/cmd_injection_ipv6/demo.mp4
+https://github.com/user-attachments/assets/8fb9b361-1c92-47b3-9124-a72b5029938d

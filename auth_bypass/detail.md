@@ -22,4 +22,4 @@ curl http://192.168.0.1/goform/GetRouterStatus?reasy-ui-1.0.3.js
 
 ## Demo
 
-https://github.com/Zeyfrost/tenda-rx3-vulns/raw/master/auth_bypass/demo.mp4
+https://github.com/user-attachments/assets/bcff4155-7ce5-4969-abfc-870ed926b020

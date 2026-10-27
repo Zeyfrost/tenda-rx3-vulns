@@ -20,4 +20,4 @@ curl -i -X POST "http://192.168.0.1/goform/AdvSetMacMtuWan?reasy-ui-1.0.3.js" -d
 
 ## Demo
 
-https://github.com/Zeyfrost/tenda-rx3-vulns/raw/master/cmd_injection_mac/demo.mp4
+https://github.com/user-attachments/assets/250df734-228d-4044-bc0f-8a3774505fd2
