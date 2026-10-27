@@ -17,3 +17,7 @@ curl -i -X POST "http://192.168.0.1/goform/AdvSetMacMtuWan?reasy-ui-1.0.3.js" -d
 ```
 
 ![PoC result](screenshots/2.png)
+
+## Demo
+
+<video src="demo.mp4" controls width="100%"></video>

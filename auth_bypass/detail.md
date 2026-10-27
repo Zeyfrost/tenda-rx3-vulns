@@ -19,3 +19,7 @@ curl http://192.168.0.1/goform/GetRouterStatus?reasy-ui-1.0.3.js
 ```
 
 ![PoC result](screenshots/2.png)
+
+## Demo
+
+<video src="demo.mp4" controls width="100%"></video>
