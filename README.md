@@ -12,6 +12,6 @@
 | 2 | [Stack Overflow (DHCP)](dhcp_gbk_overflow/detail.md) | UDP port 67 | DHCP Option 12 |
 | 3 | [Command Injection](cmd_injection_remoteIp/detail.md) | /goform/SetRemoteWebCfg | remoteIp |
 | 4 | [Command Injection](cmd_injection_mac/detail.md) | /goform/AdvSetMacMtuWan | mac |
-| 5 | [Command Injection](cmd_injection_ipv6/detail.md) | /goform/setIPv6Status | serverIPAddr |
+| 5 | [Command Injection](cmd_injection_ipv6/detail.md) | /goform/setIPv6Status | remoteIP |
 | 6 | [Password Change No Verify](password_change_no_verify/detail.md) | /goform/fast_setting_wifi_set | loginPwd |
 | 7 | [Factory Reset No Auth](factory_reset_no_auth/detail.md) | /goform/SysToolRestoreSet | — |
