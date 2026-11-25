@@ -1,3 +1,5 @@
+# CVE-2026-136552
+
 | Firmware Name | Firmware Version    | Download Link |
 | ------------- | ------------------- | ------------- |
 | RX3           | V16.03.13.11_multi  | https://static.tenda.com.cn/tdeweb/download/RX3/US_RX3V1.0br_V16.03.13.11_multi_TDE01.zip |
